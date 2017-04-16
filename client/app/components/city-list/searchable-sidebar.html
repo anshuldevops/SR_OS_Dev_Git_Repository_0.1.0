@@ -1,0 +1,57 @@
+<div class="col-md-4" >
+   <div class="widget-item">
+      <div class="request-information">
+         <h4 class="widget-title">List of Indian Schools</h4>
+         <form action= "events-list.html" class="request-info clearfix" >
+            <div class="full-row">
+               <label for="first">State:</label>
+               <div class="input-select">
+                 <select [(ngModel)]="selectedState.id" name="first" id="first" class="postform" (change)="onSelect($event.target.value)">
+                                         <option value="0" selected="selected">-- select --</option>
+                  <option *ngFor="let state of states" value= "{{state.id}}">{{state.name}}</option>
+
+                                     </select>
+               </div>
+               <!-- /.input-select -->
+            </div>
+            <!-- /.full-row -->
+            <div class="full-row">
+               <label for="second">City:</label>
+               <div class="input-select">
+                 <select name="second" id="second" class="postform">
+                                       <option value="0" selected="selected">-- select --</option>
+                                       <option *ngFor="let city of cities " value= {{city.id}}>{{city.name}}</option>
+
+
+                                   </select>
+                </div>
+               <!-- /.input-select -->
+            </div>
+            <!-- /.full-row -->
+            <div class="full-row">
+               <div class="submit_field">
+                  <input class="mainBtn pull-left" form="list" type="submit" name="" value="Submit Request">
+               </div>
+               <!-- /.submit-field -->
+            </div>
+            <!-- /.full-row -->
+         </form>
+         <!-- /.request-info -->
+      </div>
+      <!-- /.request-information -->
+   </div>
+   <!-- /.widget-item -->
+
+   <div class="widget-item">
+      <div class="request-information">
+         <h4 class="widget-title">School Looking For</h4>
+         <form action="event-single.html" class="request-info clearfix" id="list1">
+            <div class="full-row" style="position: relative; height: 40px;">
+               <input type="text" id="autocomplete-ajax" name="country" style="position: absolute; z-index: 2; background: transparent;" onkeypress="return entsub(event,this.form)"/>
+               <input type="text" name="country" id="autocomplete-ajax-x" disabled="disabled" style="color: #000; position: absolute; background: transparent; z-index: 1;" onkeyup="return entsub(event,this.form)"/>
+            </div>
+            <!-- /.full-row -->
+         </form>
+      </div>
+   </div>
+</div>
