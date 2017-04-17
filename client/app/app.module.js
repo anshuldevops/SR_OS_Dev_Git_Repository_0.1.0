@@ -14,25 +14,19 @@ var forms_1 = require('@angular/forms');
 var common_1 = require('@angular/common');
 var http_1 = require('@angular/http');
 var angular2_infinite_scroll_1 = require('angular2-infinite-scroll');
-var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var city_list_component_1 = require('./components/city-list/city-list.component');
 var main_navigation_menu_component_1 = require('./components/home_navigation/main-navigation-menu.component');
 var box_event_component_1 = require('./components/box-events/box-event.component');
 var school_detail_component_1 = require('./components/school_detail/school-detail.component');
 var page_not_found_component_1 = require('./components/page-not-found/page-not-found.component');
-exports.appRoutes = [
-    { path: 'school', component: school_detail_component_1.SchoolDetailComponent },
-    { path: '', redirectTo: '/', pathMatch: 'full' },
-    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
-];
+var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, angular2_infinite_scroll_1.InfiniteScrollModule, router_1.RouterModule.forRoot(exports.appRoutes)],
-            exports: [router_1.RouterModule],
+            imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, angular2_infinite_scroll_1.InfiniteScrollModule, app_routing_module_1.AppRoutingModule],
             declarations: [app_component_1.AppComponent, city_list_component_1.CityListComponent, main_navigation_menu_component_1.MainNavigationMenuComponent, box_event_component_1.ScrollBarBoxComponent, page_not_found_component_1.PageNotFoundComponent, school_detail_component_1.SchoolDetailComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
