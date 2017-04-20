@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var MainNavigationMenuComponent = (function () {
     function MainNavigationMenuComponent() {
-        this.navMenu = ['Home', 'About School Rankings', 'Contact'];
+        this.navMenu = ['Home', 'About', 'Contact'];
     }
     MainNavigationMenuComponent = __decorate([
         core_1.Component({
