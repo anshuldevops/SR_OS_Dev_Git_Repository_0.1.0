@@ -34,10 +34,10 @@ export class ScrollBarBoxComponent {
              canvas.height = 150;
              document.body.appendChild(canvas);
              var context = canvas.getContext('2d');
-             context.fillStyle = "#fff";
+             context.fillStyle = "#003A6A";
              context.fillRect(0, 0, canvas.width, canvas.height);
              context.font = "32px Arial";
-             context.fillStyle = "#003A6A";
+             context.fillStyle = "#fff";
              context.textAlign= "center";
              var first;
              if(input.indexOf(' ') !== -1){
