@@ -27,7 +27,9 @@
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       'angular2-infinite-scroll':  'npm:angular2-infinite-scroll',
-      'ng2-sticky-kit':            'npm:ng2-sticky-kit'
+      'ng2-sticky-kit':            'npm:ng2-sticky-kit',
+      '@nx-js/framework':          'npm:@nx-js/framework',
+      'lodash':                    'npm:lodash/lodash.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -48,6 +50,12 @@
       },
       'ng2-sticky-kit': {
         main: 'ng2-sticky-kit.js',
+        defaultExtension: 'js'
+      },
+      '@nx-js/framework': {
+        defaultExtension: 'js'
+      },
+      'lodash': {
         defaultExtension: 'js'
       }
     }
