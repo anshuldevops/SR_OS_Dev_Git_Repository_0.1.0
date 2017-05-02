@@ -5,7 +5,7 @@ var db= mongojs('mongodb://srankings:srankings123@ds145750.mlab.com:45750/school
 
 //GET All School Information
 router.get('/tasks', (req, res, next)=>{
-  db.quotes.find().skip(2).limit(10,(err, quotes)=>{
+  db.quotes.find().skip(0).limit(20,(err, quotes)=>{
     if(err){
       res.send(err);
     }
