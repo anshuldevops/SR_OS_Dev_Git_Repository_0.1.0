@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../../Task';
 import { InfiniteScroll } from 'angular2-infinite-scroll';
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable, BehaviorSubject } from 'rxjs/Rx';
+import { flatMap } from 'lodash';
+
 
 @Component({
     selector: 'scro-app',
@@ -12,20 +16,60 @@ import { Directive, ElementRef, Input } from '@angular/core';
 export class ScrollBarBoxComponent {
     tasks: Task[];
 
-    constructor(private taskService: TaskService){
+  private cache = [];
+  private pageByManual$ = new BehaviorSubject(1);
+  private itemHeight = 40;
+  private numberOfItems = 10;
+
+    constructor(private taskService: TaskService, private http: Http){
       this.taskService.getTasks()
         .subscribe(tasks =>{
           this.tasks= tasks;
         });
     }
 
-      onScrollDown () {
-	    console.log('scrolled down!!');
+      onScrollDown(event) {
+	    console.log('scrolled down!!', event);
 	}
 
 	   onScrollUp () {
     	console.log('scrolled up!!');
     }
+
+    private pageByScroll$ = Observable.fromEvent(window, "scroll")
+          .map(() => window.scrollY)
+          .filter(current => current >=  document.body.clientHeight - window.innerHeight)
+          .debounceTime(200)
+          .distinct()
+          .map(y => Math.ceil((y + window.innerHeight)/ (this.itemHeight * this.numberOfItems)));
+
+      private pageByResize$ = Observable
+        .fromEvent(window, "resize")
+        .debounceTime(200)
+        .map(_ => Math.ceil((window.innerHeight + document.body.scrollTop) / (this.itemHeight * this.numberOfItems)));
+
+      private pageToLoad$ = Observable
+        .merge(this.pageByManual$, this.pageByScroll$, this.pageByResize$)
+        .distinct()
+        .filter(page => this.cache[page-1] === undefined)
+
+      loading = false;
+      itemResults$ = this.pageToLoad$
+        .do(_ => this.loading = true)
+        .flatMap((page: number) => {
+          return this.http.get('http://localhost:3000/api/tasks?page=1')
+              .map(resp => resp.json().results)
+              .do(resp => {
+                this.cache[page -1] = resp;
+                this.loading = false;
+
+                if((this.itemHeight * this.numberOfItems * page) < window.innerHeight){
+                  this.pageByManual$.next(page + 1);
+                }
+              })
+        })
+        .map(_ => flatMap(this.cache));
+
 
     getInitials(input): any{
     var canvas = document.createElement('canvas');
@@ -34,10 +78,10 @@ export class ScrollBarBoxComponent {
              canvas.height = 150;
              document.body.appendChild(canvas);
              var context = canvas.getContext('2d');
-             context.fillStyle = "#003A6A";
+             context.fillStyle = "#fff";
              context.fillRect(0, 0, canvas.width, canvas.height);
              context.font = "32px Arial";
-             context.fillStyle = "#fff";
+             context.fillStyle = "#003A6A";
              context.textAlign= "center";
              var first;
              if(input.indexOf(' ') !== -1){

@@ -8,19 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var MainNavigationMenuComponent = (function () {
     function MainNavigationMenuComponent() {
-        this.navMenu = ['Home', 'About', 'Contact'];
+        this.navMenu = ['Home', 'School Rankings', 'Contact'];
     }
-    MainNavigationMenuComponent = __decorate([
-        core_1.Component({
-            selector: 'navmenu-app',
-            templateUrl: './app/components/home_navigation/main-navigation-menu.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], MainNavigationMenuComponent);
     return MainNavigationMenuComponent;
 }());
+MainNavigationMenuComponent = __decorate([
+    core_1.Component({
+        selector: 'navmenu-app',
+        templateUrl: './app/components/home_navigation/main-navigation-menu.html'
+    }),
+    __metadata("design:paramtypes", [])
+], MainNavigationMenuComponent);
 exports.MainNavigationMenuComponent = MainNavigationMenuComponent;
 //# sourceMappingURL=main-navigation-menu.component.js.map

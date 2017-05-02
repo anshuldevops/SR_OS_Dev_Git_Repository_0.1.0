@@ -8,20 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var task_service_1 = require('./services/task.service');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var task_service_1 = require("./services/task.service");
+var http_1 = require("@angular/http");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(http) {
+        this.http = http;
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: '<navmenu-app>Loading...</navmenu-app> <filter-app></filter-app>  <scro-app></scro-app>',
-            providers: [task_service_1.TaskService]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: '<navmenu-app>Loading...</navmenu-app> <filter-app></filter-app> <scro-app></scro-app>',
+        providers: [task_service_1.TaskService]
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

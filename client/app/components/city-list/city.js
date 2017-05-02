@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var City = (function () {
     function City(id, state_id, name) {
         this.id = id;

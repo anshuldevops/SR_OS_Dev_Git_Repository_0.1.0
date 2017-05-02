@@ -20,4 +20,8 @@ export class CityListComponent {
   onSelect(state_id) {
     this.cities = this._dataService.getCities().filter((item)=> item.state_id == state_id);
   }
+
+  performSearch(name: string){
+
+  }
 }

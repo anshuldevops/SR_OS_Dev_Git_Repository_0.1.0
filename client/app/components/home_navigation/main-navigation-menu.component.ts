@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class MainNavigationMenuComponent {
   navMenu: string[];
   constructor() {
-    this.navMenu = ['Home','About', 'Contact'];
+    this.navMenu = ['Home','School Rankings', 'Contact'];
     }
 }

@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var data_service_1 = require('./data-service');
-var state_1 = require('./state');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var data_service_1 = require("./data-service");
+var state_1 = require("./state");
 var CityListComponent = (function () {
     function CityListComponent(_dataService) {
         this._dataService = _dataService;
@@ -20,15 +21,17 @@ var CityListComponent = (function () {
     CityListComponent.prototype.onSelect = function (state_id) {
         this.cities = this._dataService.getCities().filter(function (item) { return item.state_id == state_id; });
     };
-    CityListComponent = __decorate([
-        core_1.Component({
-            selector: 'filter-app',
-            templateUrl: './app/components/city-list/searchable-sidebar.html',
-            providers: [data_service_1.DataService]
-        }), 
-        __metadata('design:paramtypes', [data_service_1.DataService])
-    ], CityListComponent);
+    CityListComponent.prototype.performSearch = function (name) {
+    };
     return CityListComponent;
 }());
+CityListComponent = __decorate([
+    core_1.Component({
+        selector: 'filter-app',
+        templateUrl: './app/components/city-list/searchable-sidebar.html',
+        providers: [data_service_1.DataService]
+    }),
+    __metadata("design:paramtypes", [data_service_1.DataService])
+], CityListComponent);
 exports.CityListComponent = CityListComponent;
 //# sourceMappingURL=city-list.component.js.map
