@@ -5,6 +5,7 @@ var compression= require('compression');
 var index= require('./routes/index');
 var tasks= require('./routes/sr-event-box.js');
 var pagenotfound= require('./routes/page-not-found.js');
+var about= require('./routes/about.js');
 var app=express();
 
 //compress everything
@@ -24,9 +25,11 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+app.use('/AboutUs', about);
 app.use('/', index);
 app.use('/api', tasks);
-app.use('/', pagenotfound);
+app.use('*', pagenotfound);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
