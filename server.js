@@ -1,11 +1,14 @@
 var express= require('express');
 var bodyParser = require('body-parser');
 var path= require('path');
-
+var compression= require('compression');
 var index= require('./routes/index');
 var tasks= require('./routes/sr-event-box.js');
-
+var pagenotfound= require('./routes/page-not-found.js');
 var app=express();
+
+//compress everything
+app.use(compression());
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +26,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/', index);
 app.use('/api', tasks);
+app.use('/', pagenotfound);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
