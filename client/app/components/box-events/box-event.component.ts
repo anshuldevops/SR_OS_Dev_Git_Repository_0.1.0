@@ -6,6 +6,8 @@ import { InfiniteScroll } from 'angular2-infinite-scroll';
 import { Http } from '@angular/http';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { flatMap } from 'lodash';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 
 @Component({
@@ -21,7 +23,7 @@ export class ScrollBarBoxComponent {
   private itemHeight = 40;
   private numberOfItems = 10;
 
-    constructor(private taskService: TaskService, private http: Http){
+    constructor(private taskService: TaskService, private http: Http, private route: ActivatedRoute, private router: Router){
       this.taskService.getTasks()
         .subscribe(tasks =>{
           this.tasks= tasks;
@@ -56,8 +58,8 @@ export class ScrollBarBoxComponent {
       loading = false;
       itemResults$ = this.pageToLoad$
         .do(_ => this.loading = true)
-        .flatMap((page: number) => {
-          return this.http.get('http://localhost:3000/api/tasks?page=1')
+        .flatMap((page: number) =>{
+          return this.http.get('https://swapi.co/api/people?page=1')
               .map(resp => resp.json().results)
               .do(resp => {
                 this.cache[page -1] = resp;

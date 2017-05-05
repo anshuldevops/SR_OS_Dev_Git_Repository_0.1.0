@@ -21,7 +21,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: '<navmenu-app>Loading...</navmenu-app> <filter-app></filter-app> <scro-app></scro-app>',
+        template: '<navmenu-app> Loading... </navmenu-app> <filter-app> Loading... </filter-app> <scro-app> Loading... </scro-app> <root></root>',
         providers: [task_service_1.TaskService]
     }),
     __metadata("design:paramtypes", [http_1.Http])

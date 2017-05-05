@@ -14,11 +14,15 @@ var task_service_1 = require("../../services/task.service");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
 var lodash_1 = require("lodash");
+var router_1 = require("@angular/router");
+require("rxjs/add/operator/switchMap");
 var ScrollBarBoxComponent = (function () {
-    function ScrollBarBoxComponent(taskService, http) {
+    function ScrollBarBoxComponent(taskService, http, route, router) {
         var _this = this;
         this.taskService = taskService;
         this.http = http;
+        this.route = route;
+        this.router = router;
         this.cache = [];
         this.pageByManual$ = new Rx_1.BehaviorSubject(1);
         this.itemHeight = 40;
@@ -41,7 +45,7 @@ var ScrollBarBoxComponent = (function () {
         this.itemResults$ = this.pageToLoad$
             .do(function (_) { return _this.loading = true; })
             .flatMap(function (page) {
-            return _this.http.get('http://localhost:3000/api/tasks?page=1')
+            return _this.http.get('https://swapi.co/api/people?page=1')
                 .map(function (resp) { return resp.json().results; })
                 .do(function (resp) {
                 _this.cache[page - 1] = resp;
@@ -105,7 +109,7 @@ ScrollBarBoxComponent = __decorate([
         selector: 'scro-app',
         templateUrl: './app/components/box-events/scrollbar-box.html'
     }),
-    __metadata("design:paramtypes", [task_service_1.TaskService, http_1.Http])
+    __metadata("design:paramtypes", [task_service_1.TaskService, http_1.Http, router_1.ActivatedRoute, router_1.Router])
 ], ScrollBarBoxComponent);
 exports.ScrollBarBoxComponent = ScrollBarBoxComponent;
 //# sourceMappingURL=box-event.component.js.map
