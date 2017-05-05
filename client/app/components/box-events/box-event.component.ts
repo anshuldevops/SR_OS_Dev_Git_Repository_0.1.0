@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Directive, ElementRef, Input } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../../Task';
-import { InfiniteScroll } from 'angular2-infinite-scroll';
 import { Http } from '@angular/http';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { flatMap } from 'lodash';

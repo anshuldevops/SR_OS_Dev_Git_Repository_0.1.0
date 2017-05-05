@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
 import { AppComponent } from './app.component';
 import { CityListComponent } from './components/city-list/city-list.component';
@@ -17,7 +16,7 @@ import { RootComponent } from './root.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, CommonModule, FormsModule, HttpModule, InfiniteScrollModule, AppRoutingModule, mainRoutingProviders ],
+  imports:      [ BrowserModule, CommonModule, FormsModule, HttpModule, AppRoutingModule, mainRoutingProviders ],
   declarations: [ AppComponent, CityListComponent, MainNavigationMenuComponent, ScrollBarBoxComponent, PageNotFoundComponent, SchoolDetailComponent, RootComponent],
   bootstrap:    [ AppComponent ]
 })

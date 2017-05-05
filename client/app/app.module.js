@@ -11,7 +11,6 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
 var http_1 = require("@angular/http");
-var angular2_infinite_scroll_1 = require("angular2-infinite-scroll");
 var app_component_1 = require("./app.component");
 var city_list_component_1 = require("./components/city-list/city-list.component");
 var main_navigation_menu_component_1 = require("./components/home_navigation/main-navigation-menu.component");
@@ -27,7 +26,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, angular2_infinite_scroll_1.InfiniteScrollModule, app_routing_module_1.AppRoutingModule, app_routing_module_1.mainRoutingProviders],
+        imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, app_routing_module_1.AppRoutingModule, app_routing_module_1.mainRoutingProviders],
         declarations: [app_component_1.AppComponent, city_list_component_1.CityListComponent, main_navigation_menu_component_1.MainNavigationMenuComponent, box_event_component_1.ScrollBarBoxComponent, page_not_found_component_1.PageNotFoundComponent, school_detail_component_1.SchoolDetailComponent, root_component_1.RootComponent],
         bootstrap: [app_component_1.AppComponent]
     })
