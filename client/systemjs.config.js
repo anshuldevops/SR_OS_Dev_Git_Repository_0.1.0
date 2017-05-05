@@ -26,7 +26,6 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-      'angular2-infinite-scroll':  'npm:angular2-infinite-scroll',
       'ng2-sticky-kit':            'npm:ng2-sticky-kit',
       '@nx-js/framework':          'npm:@nx-js/framework',
       'lodash':                    'npm:lodash/lodash.js'
@@ -42,10 +41,6 @@
       },
       'angular-in-memory-web-api': {
         main: './index.js',
-        defaultExtension: 'js'
-      },
-      'angular2-infinite-scroll': {
-        main: 'angular2-infinite-scroll.js',
         defaultExtension: 'js'
       },
       'ng2-sticky-kit': {
