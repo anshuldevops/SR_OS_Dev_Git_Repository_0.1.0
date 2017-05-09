@@ -30,7 +30,7 @@ body,
 }
 
 .search-form form input {
-  background-color: #004074;
+  background-color: white;
 }
 
 .responsive_menu {
@@ -51,7 +51,7 @@ body,
 .social_icons li a,
 .footer-media-icons li a,
 .flex-direction-nav a {
-  background-color: #003a6a;
+  background-color: #004884;
 }
 
 .main-navigation,
@@ -132,7 +132,7 @@ body,
 .main-menu li ul li:before,
 .site-header,
 .site-header a {
-  color: #8ab5d6;
+  color: #7aa9ce;
 }
 
 .site-header a:hover {
@@ -221,7 +221,7 @@ blockquote,
 .search-form form input,
 .main-navigation,
 .main-menu li {
-  border-color: #00569d;
+  border-color: #004884;
 }
 
 .main-menu li ul li {
