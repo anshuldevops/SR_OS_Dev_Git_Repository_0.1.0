@@ -84,7 +84,11 @@ blockquote,
 }
 
 .main-menu li.active .sub-menu a:hover,
-.main-menu li a:hover,
+.main-menu li a:hover{
+  color: white;
+  background: #003d70;
+  border-bottom: 0px solid #003d70;
+}
 .social-icons li a,
 .social_icons li a,
 .slider-caption h2 a,
@@ -110,6 +114,8 @@ blockquote,
   color: white;
 }
 
+
+
 body,
 .blog-list-meta a,
 .event-small-meta,
@@ -132,7 +138,7 @@ body,
 .main-menu li ul li:before,
 .site-header,
 .site-header a {
-  color: #7aa9ce;
+  color: white;
 }
 
 .site-header a:hover {
