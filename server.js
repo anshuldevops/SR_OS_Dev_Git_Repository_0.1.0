@@ -2,10 +2,13 @@ var express= require('express');
 var bodyParser = require('body-parser');
 var path= require('path');
 var compression= require('compression');
+
+//Modules to be loaded
 var index= require('./routes/index');
 var tasks= require('./routes/sr-event-box.js');
 var pagenotfound= require('./routes/page-not-found.js');
 var about= require('./routes/about.js');
+var contact= require('./routes/contact.js');
 var app=express();
 
 //compress everything
@@ -25,10 +28,12 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use('/AboutUs', about);
-app.use('/', index);
 app.use('/api', tasks);
+app.use('/', index);
+app.use('/AboutUs', about);
+app.use('/Contact', contact);
 app.use('*', pagenotfound);
+
 
 
 // catch 404 and forward to error handler
