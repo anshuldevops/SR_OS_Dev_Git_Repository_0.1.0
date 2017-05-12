@@ -42,18 +42,18 @@ The School Rankings aims to streamline the admission process of pre-primary, pri
 - [Node JS](https://nodejs.org/en/) v6.10.3 LTS
 - [Atom](https://atom.io/) Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file. Atom by GitHub, provides a seamless experience of integrating and synching application code over GitHub repository in no time.
 School Rankings team currently developing all of its core new functionalities, and as well as if any change request was coming in the code, on Atom - an official IDE for development at present.  
-- [Git Bash 64-bit](https://git-scm.com/download/) v2.13.0. 
+- [Git Bash 64-bit](https://git-scm.com/download/) v2.13.0.
   !Important Note: Git for Windows provides a BASH emulation used to run Git from the command line. Kindly install Git Bash that runs on command line as well.
 
 ## Path Configuration  
 
 In case, the paths of above prerequisites softwares are not configured on System Properties>Environment Variables>Sytem Variables>Path of your machine, kindly follow the path configurations of the same:
 
-- [Node JS Path Configuration](#nodejs-path-config) Post-installation copy folder path of nodejs and paste by editing in system variable named 'Path'.  
+- [Node JS Path Configuration](#nodejs-path-config) Post-installation copy folder path of nodejs and paste by editing in system variable named 'Path'.<br><br>  
 For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\nodejs\;
 
-- [Git Path Configuration 64-bit](#git-bash-path-config) Post-installation copy folder path of git/cmd, git/mingw64/bin, and git/usr/bin, and paste by editing in system variable named 'Path'.
-For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\cmd;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+- [Git Path Configuration 64-bit](#git-bash-path-config) Post-installation copy folder path of git/cmd, git/mingw64/bin, and git/usr/bin, and paste by editing in system variable named 'Path'.<br><br>
+For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\cmd;<br>&nbsp;&nbsp;&nbsp;
 C:\Program Files\Git\mingw64\bin;<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\usr\bin
 
 ## How to Setup
