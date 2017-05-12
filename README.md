@@ -6,10 +6,19 @@
 </p>
 <p align="center">
   <a href="https://github.com/rishimehta365/SR_OS_Dev_Git_Repository_0.1.0">
-    <img alt="Awesome" src="https://img.shields.io/badge/SR-school--rankings-orange.svg">
+    <img alt="School Rankings" src="https://img.shields.io/badge/SR-school--rankings-orange.svg">
   </a>
   <a href="https://github.com/rishimehta365/SR_OS_Dev_Git_Repository_0.1.0">
 	<img alt="Open Source Project" src="https://img.shields.io/badge/OS-open--source--project-blue.svg">
+  </a>
+  <a href="https://nodejs.org/en/">
+	<img alt="Node JS" src="https://img.shields.io/badge/nodejs-V6.10.3-yellowgreen.svg">
+  </a>
+  <a href="https://v2.angular.io/docs/ts/latest/">
+	<img alt="Angular2 JS" src="https://img.shields.io/badge/angularjs%20-2-yellow.svg">
+  </a>
+  <a href="https://github.com/mongodb/mongo">
+	<img alt="Mongo DB" src="https://img.shields.io/badge/mongo%20-db-ff69b4.svg">
   </a>
 </p>
 
