@@ -1,4 +1,4 @@
-![School Rankings](http://i.imgur.com/gpWujVW.jpg)
+<p align="center">![School Rankings](http://i.imgur.com/gpWujVW.jpg)</p>
 
 <h3 align="center">School Rankings</h3>
 <p align="center">
@@ -22,7 +22,7 @@
 
 # Summary
 
-The School Rankings aims to streamline the admission process of pre-primary, primary and secondary schools of India with the help of technology. It converges the best of today's technology and promises to bring upon a change through convergence into the Indian education system by leveraging the conventional process of offering admissions into schools. 
+The School Rankings aims to streamline the admission process of pre-primary, primary and secondary schools of India with the help of technology. It converges the best of today's technology and promises to bring upon a change through convergence into the Indian education system by leveraging the conventional process of offering admissions into schools.
 
 # Installation
 
