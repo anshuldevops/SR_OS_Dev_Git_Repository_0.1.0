@@ -1,4 +1,4 @@
-<p align="center">![School Rankings](http://i.imgur.com/gpWujVW.jpg)</p>
+<p align="center"><img src="http://i.imgur.com/gpWujVW.jpg"></p>
 
 <h3 align="center">School Rankings</h3>
 <p align="center">
