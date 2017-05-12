@@ -2,7 +2,7 @@
 
 <h3 align="center">School Rankings</h3>
 <p align="center">
-  Putting a stop to rushing for admission seats!
+  Putting a <strong>STOP</strong> to rushing for admission seats!
 </p>
 <p align="center">
   <a href="https://github.com/rishimehta365/SR_OS_Dev_Git_Repository_0.1.0">
@@ -17,7 +17,7 @@
 
 - [Summary](#summary)
 - [Installation](#installation)
-  - [Prerequisites](#prerequisites)
+  - [Prerequisites Softwares](#prerequisites-softwares)
   - [Path Configuration](#path-configuration)
   - [How to Setup](#how-to-setup)
 
