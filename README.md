@@ -49,7 +49,7 @@ School Rankings team currently developing all of its core new functionalities, a
 
 In case, the paths of above prerequisites softwares are not configured on System Properties>Environment Variables>Sytem Variables>Path of your machine, kindly follow the path configurations of the same:
 
-- [Node JS Path Configuration](#nodejs-path-config) Post-installation copy folder path of nodejs and paste by editing in system variable named 'Path'.<br><br>  
+- [Node JS Path Configuration](#nodejs-path-config) Post-installation copy folder path of nodejs and paste by editing in system variable named 'Path'.<br>  
 For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\nodejs\;
 
 - [Git Path Configuration 64-bit](#git-bash-path-config) Post-installation copy folder path of git/cmd, git/mingw64/bin, and git/usr/bin, and paste by editing in system variable named 'Path'.<br><br>
