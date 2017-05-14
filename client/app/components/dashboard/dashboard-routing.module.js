@@ -12,7 +12,7 @@ var dashboard_component_1 = require("./dashboard.component");
 var school_detail_component_1 = require("./school_detail/school-detail.component");
 var dashboardRoutes = [
     {
-        path: 'index',
+        path: '',
         component: dashboard_component_1.DashboardComponent
     },
     {

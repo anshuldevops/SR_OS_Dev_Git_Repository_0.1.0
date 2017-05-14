@@ -4,8 +4,8 @@ var router_1 = require("@angular/router");
 var page_not_found_component_1 = require("./page-not-found.component");
 var appRoutes = [
     {
-        path: ' ',
-        redirectTo: '/index',
+        path: '',
+        redirectTo: '/',
         pathMatch: 'full'
     },
     {

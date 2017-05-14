@@ -7,8 +7,8 @@ const appRoutes: Routes= [
 
 
   {
-    path: ' ',
-    redirectTo: '/index',
+    path: '',
+    redirectTo: '/',
     pathMatch: 'full'
   },
   {

@@ -7,7 +7,7 @@ import { SchoolDetailComponent } from './school_detail/school-detail.component';
 const dashboardRoutes: Routes = [
 
   {
-   path: 'index',
+   path: '',
    component: DashboardComponent
   },
   {
