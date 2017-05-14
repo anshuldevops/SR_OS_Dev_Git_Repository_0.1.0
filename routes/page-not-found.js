@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('', (req, res, next)=>{
-  res.send('<h1>404 Not Found</h1>');
+  res.render('pagenotfound.html');
 });
 
 module.exports= router;
