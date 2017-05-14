@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<h1>Hello World</h1>'
+  selector: 'schooldetail-app',
+  templateUrl: './app/components/dashboard/school_detail/school-detail.html'
 })
 
-export class SchoolDetailComponent{
-
-}
+export class SchoolDetailComponent { }

@@ -14,7 +14,8 @@ var SchoolDetailComponent = (function () {
 }());
 SchoolDetailComponent = __decorate([
     core_1.Component({
-        template: '<h1>Hello World</h1>'
+        selector: 'schooldetail-app',
+        templateUrl: './app/components/dashboard/school_detail/school-detail.html'
     })
 ], SchoolDetailComponent);
 exports.SchoolDetailComponent = SchoolDetailComponent;
