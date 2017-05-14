@@ -7,16 +7,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var router_1 = require("@angular/router");
+var contact_component_1 = require("./contact.component");
+var contactRoutes = [
+    {
+        path: 'contact',
+        component: contact_component_1.ContactComponent
     }
-    return AppComponent;
+];
+var ContactRoutingModule = (function () {
+    function ContactRoutingModule() {
+    }
+    return ContactRoutingModule;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: '<navmenu-app></navmenu-app>'
+ContactRoutingModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            router_1.RouterModule.forRoot(contactRoutes)
+        ],
+        exports: [
+            router_1.RouterModule
+        ]
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], ContactRoutingModule);
+exports.ContactRoutingModule = ContactRoutingModule;
+//# sourceMappingURL=contact-routing.module.js.map

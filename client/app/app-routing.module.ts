@@ -1,15 +1,20 @@
 import { ModuleWithProviders }   from '@angular/core';
 import { Routes, RouterModule }  from '@angular/router';
-import { AppComponent } from './app.component';
-
-import { SchoolDetailComponent } from './components/school_detail/school-detail.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 const appRoutes: Routes= [
-  { path: 'school', component: SchoolDetailComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full'},
-  { path: '**', component: PageNotFoundComponent}
+
+
+  {
+    path: ' ',
+    redirectTo: '/index',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 export const mainRoutingProviders: any[] = [];

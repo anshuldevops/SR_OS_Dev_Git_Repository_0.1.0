@@ -3,21 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { Router } from '@angular/router';
 
+import { MainNavigationMenuModule } from './components/home_navigation/main-navigation-menu.module';
+import { DashboardModule } from './components/dashboard/dashboard.module';
+import { AboutModule } from './components/about/about.module';
+import { ContactModule } from './components/contact/contact.module';
 import { AppComponent } from './app.component';
-import { CityListComponent } from './components/city-list/city-list.component';
-import { MainNavigationMenuComponent } from './components/home_navigation/main-navigation-menu.component';
-import { ScrollBarBoxComponent } from './components/box-events/box-event.component';
-import { SchoolDetailComponent } from './components/school_detail/school-detail.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule, mainRoutingProviders } from './app-routing.module';
-import { RootComponent } from './root.component';
-
+import { RouteOutletComponent } from './route-outlet.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, CommonModule, FormsModule, HttpModule, AppRoutingModule, mainRoutingProviders ],
-  declarations: [ AppComponent, CityListComponent, MainNavigationMenuComponent, ScrollBarBoxComponent, PageNotFoundComponent, SchoolDetailComponent, RootComponent],
+  imports:      [ BrowserModule, CommonModule, FormsModule, HttpModule, DashboardModule, MainNavigationMenuModule, AboutModule, ContactModule, AppRoutingModule, mainRoutingProviders ],
+  declarations: [ AppComponent, RouteOutletComponent, PageNotFoundComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+
+export class AppModule {
+  constructor(router: Router){
+    console.log('Routes: ',JSON.stringify(router.config, undefined, 2));
+  }
+}

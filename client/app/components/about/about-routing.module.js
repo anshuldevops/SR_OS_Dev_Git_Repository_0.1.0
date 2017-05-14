@@ -7,15 +7,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PageNotFoundComponent = (function () {
-    function PageNotFoundComponent() {
+var router_1 = require("@angular/router");
+var about_component_1 = require("./about.component");
+var aboutRoutes = [
+    {
+        path: 'about',
+        component: about_component_1.AboutComponent
     }
-    return PageNotFoundComponent;
+];
+var AboutRoutingModule = (function () {
+    function AboutRoutingModule() {
+    }
+    return AboutRoutingModule;
 }());
-PageNotFoundComponent = __decorate([
-    core_1.Component({
-        templateUrl: './app/components/page-not-found/pagenotfound.html'
+AboutRoutingModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            router_1.RouterModule.forRoot(aboutRoutes)
+        ],
+        exports: [
+            router_1.RouterModule
+        ]
     })
-], PageNotFoundComponent);
-exports.PageNotFoundComponent = PageNotFoundComponent;
-//# sourceMappingURL=page-not-found.component.js.map
+], AboutRoutingModule);
+exports.AboutRoutingModule = AboutRoutingModule;
+//# sourceMappingURL=about-routing.module.js.map

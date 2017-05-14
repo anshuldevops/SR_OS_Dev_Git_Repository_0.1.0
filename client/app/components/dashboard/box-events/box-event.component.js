@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var task_service_1 = require("../../services/task.service");
+var task_service_1 = require("../../../services/task.service");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
 var lodash_1 = require("lodash");
@@ -107,7 +107,7 @@ var ScrollBarBoxComponent = (function () {
 ScrollBarBoxComponent = __decorate([
     core_1.Component({
         selector: 'scro-app',
-        templateUrl: './app/components/box-events/scrollbar-box.html'
+        templateUrl: './app/components/dashboard/box-events/scrollbar-box.html'
     }),
     __metadata("design:paramtypes", [task_service_1.TaskService, http_1.Http, router_1.ActivatedRoute, router_1.Router])
 ], ScrollBarBoxComponent);

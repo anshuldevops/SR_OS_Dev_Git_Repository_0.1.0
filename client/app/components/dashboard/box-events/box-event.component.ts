@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Directive, ElementRef, Input } from '@angular/core';
-import { TaskService } from '../../services/task.service';
-import { Task } from '../../../Task';
+import { TaskService } from '../../../services/task.service';
+import { Task } from '../../../../Task';
 import { Http } from '@angular/http';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { flatMap } from 'lodash';
@@ -11,7 +11,7 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'scro-app',
-    templateUrl: './app/components/box-events/scrollbar-box.html'
+    templateUrl: './app/components/dashboard/box-events/scrollbar-box.html'
 })
 
 export class ScrollBarBoxComponent {

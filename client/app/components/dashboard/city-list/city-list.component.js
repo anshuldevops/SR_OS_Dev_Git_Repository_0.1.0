@@ -28,7 +28,7 @@ var CityListComponent = (function () {
 CityListComponent = __decorate([
     core_1.Component({
         selector: 'filter-app',
-        templateUrl: './app/components/city-list/searchable-sidebar.html',
+        templateUrl: './app/components/dashboard/city-list/searchable-sidebar.html',
         providers: [data_service_1.DataService]
     }),
     __metadata("design:paramtypes", [data_service_1.DataService])

@@ -5,7 +5,7 @@ import { State } from './state';
 
 @Component({
   selector: 'filter-app',
-  templateUrl: './app/components/city-list/searchable-sidebar.html',
+  templateUrl: './app/components/dashboard/city-list/searchable-sidebar.html',
   providers: [DataService]
 })
 export class CityListComponent {

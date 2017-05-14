@@ -10,17 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var RootComponent = (function () {
-    function RootComponent() {
+var http_1 = require("@angular/http");
+var task_service_1 = require("../../services/task.service");
+require("rxjs/add/operator/switchMap");
+var DashboardComponent = (function () {
+    function DashboardComponent(http) {
+        this.http = http;
     }
-    return RootComponent;
+    return DashboardComponent;
 }());
-RootComponent = __decorate([
+DashboardComponent = __decorate([
     core_1.Component({
-        selector: 'root',
-        template: '<router-outlet></router-outlet>'
+        selector: 'dash-app',
+        template: '<filter-app>Loading...</filter-app><scro-app>Loading...</scro-app>',
+        providers: [task_service_1.TaskService]
     }),
-    __metadata("design:paramtypes", [])
-], RootComponent);
-exports.RootComponent = RootComponent;
-//# sourceMappingURL=root.component.js.map
+    __metadata("design:paramtypes", [http_1.Http])
+], DashboardComponent);
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map
