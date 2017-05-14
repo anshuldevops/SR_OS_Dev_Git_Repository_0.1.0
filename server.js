@@ -30,9 +30,9 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api', tasks);
 app.use('/', index);
-app.use('/AboutUs', about);
-app.use('/Contact', contact);
-app.use('*', pagenotfound);
+app.use('/about', about);
+app.use('/contact', contact);
+app.use('**', pagenotfound);
 
 
 
