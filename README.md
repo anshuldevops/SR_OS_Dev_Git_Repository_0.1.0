@@ -32,8 +32,10 @@
 
 
 # Summary
-
-The School Rankings aims to streamline the admission process of pre-primary, primary and secondary schools of India with the help of technology. It converges the best of today's technology and promises to bring upon a change through convergence into the Indian education system by leveraging the conventional process of offering admissions into schools.
+When work takes up majority of parents to across various parts of a country, so called Movements as some says, the biggest concern lies with is securing the admission into schools.
+However, given under any circumstances and by any means, parents somehow in some way figure out schools that is open to admissions which not only bring a promise for a better future but also offer fees that fit into their budget where as some parents compromise on the budget but their kids end up having a hassle free travelling experience.
+No parent couldn't stand to compromise on the promising future of any child but in order to have maximum utilization of benefits to gain, they allow themselves to compromise on circumstantial problems of lesser priority and value. Notwithstanding no one understands the pain that they go through during the whole process.<br><br>
+The School Rankings aims to streamline the course of admission process of pre-primary, primary and secondary schools of India using Internet. School Rankings converges the best of today's technology, and promises to bring upon a change into education system by leveraging the conventional process of knowing about admissions in schools.
 
 # Installation
 
@@ -51,7 +53,7 @@ The School Rankings aims to streamline the admission process of pre-primary, pri
 - [Node JS](https://nodejs.org/en/) v6.10.3 LTS
 - [Atom](https://atom.io/) Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file. Atom by GitHub, provides a seamless experience of integrating and synching application code over GitHub repository in no time.
 School Rankings team currently developing all of its core new functionalities, and as well as if any change request was coming in the code, on Atom - an official IDE for development at present.  
-- [Git Bash 64-bit](https://git-scm.com/download/) v2.13.0.
+- [Git Bash 64-bit](https://git-scm.com/download/) v2.13.0.<br>
   !Important Note: Git for Windows provides a BASH emulation used to run Git from the command line. Kindly install Git Bash that runs on command line as well.
 
 ## Path Configuration  
