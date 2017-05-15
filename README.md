@@ -33,9 +33,9 @@
 
 # Summary
 When work takes up majority of parents to across various parts of a country, so called Movements as some says, the biggest concern lies with is securing the admission into schools.
-However, given under any circumstances and by any means, parents somehow in some way figure out schools that is open to admissions which not only bring a promise for a better future but also offer fees that fit into their budget where as some parents compromise on the budget but their kids end up having a hassle free travelling experience.
+However, given under any circumstances and by any means, parents somehow in some way figure out schools that is open to admissions which not only bring a promise for a better future but also offer fees that fit into their budget where as some parents compromise on the budget but their kids end up having a hassle free travelling experience.<br><br>
 No parent couldn't stand to compromise on the promising future of any child but in order to have maximum utilization of benefits to gain, they allow themselves to compromise on circumstantial problems of lesser priority and value. Notwithstanding no one understands the pain that they go through during the whole process.<br><br>
-The School Rankings aims to streamline the course of admission process of pre-primary, primary and secondary schools of India using Internet. School Rankings converges the best of today's technology, and promises to bring upon a change into education system by leveraging the conventional process of knowing about admissions in schools.
+The School Rankings aims to streamline the course of admission process of pre-primary, primary and secondary schools of India using Internet. School Rankings converges the best of today's technology, and promises to bring upon a change into educational management system by leveraging the conventional process of knowing about status of admissions in schools.
 
 # Installation
 
