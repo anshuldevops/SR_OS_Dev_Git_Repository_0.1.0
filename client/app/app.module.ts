@@ -1,6 +1,5 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
@@ -16,7 +15,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, CommonModule, FormsModule, HttpModule, DashboardModule, MainNavigationMenuModule, AboutModule, ContactModule, AppRoutingModule, mainRoutingProviders ],
+  imports:      [ BrowserModule, CommonModule, HttpModule, DashboardModule, MainNavigationMenuModule, AboutModule, ContactModule, AppRoutingModule, mainRoutingProviders ],
   declarations: [ AppComponent, RouteOutletComponent, PageNotFoundComponent ],
   bootstrap:    [ AppComponent ]
 })

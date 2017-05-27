@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
 var http_1 = require("@angular/http");
 var router_1 = require("@angular/router");
@@ -31,7 +30,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, dashboard_module_1.DashboardModule, main_navigation_menu_module_1.MainNavigationMenuModule, about_module_1.AboutModule, contact_module_1.ContactModule, app_routing_module_1.AppRoutingModule, app_routing_module_1.mainRoutingProviders],
+        imports: [platform_browser_1.BrowserModule, common_1.CommonModule, http_1.HttpModule, dashboard_module_1.DashboardModule, main_navigation_menu_module_1.MainNavigationMenuModule, about_module_1.AboutModule, contact_module_1.ContactModule, app_routing_module_1.AppRoutingModule, app_routing_module_1.mainRoutingProviders],
         declarations: [app_component_1.AppComponent, route_outlet_component_1.RouteOutletComponent, page_not_found_component_1.PageNotFoundComponent],
         bootstrap: [app_component_1.AppComponent]
     }),
