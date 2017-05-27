@@ -5,10 +5,11 @@ var compression= require('compression');
 
 //Modules to be loaded
 var index= require('./routes/index');
-var tasks= require('./routes/sr-event-box.js');
+var api= require('./routes/api');
 var pagenotfound= require('./routes/page-not-found.js');
 var about= require('./routes/about.js');
 var contact= require('./routes/contact.js');
+
 var app=express();
 
 //compress everything
@@ -28,7 +29,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use('/api', tasks);
+app.use('/api', api);
 app.use('/', index);
 app.use('/about', about);
 app.use('/contact', contact);
