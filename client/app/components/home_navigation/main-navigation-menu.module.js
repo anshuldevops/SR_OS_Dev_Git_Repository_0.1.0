@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var main_navigation_menu_component_1 = require("./main-navigation-menu.component");
 var MainNavigationMenuModule = (function () {
     function MainNavigationMenuModule() {
@@ -18,7 +19,7 @@ var MainNavigationMenuModule = (function () {
 }());
 MainNavigationMenuModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, common_1.CommonModule, router_1.RouterModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, common_1.CommonModule, router_1.RouterModule],
         declarations: [main_navigation_menu_component_1.MainNavigationMenuComponent],
         exports: [main_navigation_menu_component_1.MainNavigationMenuComponent]
     })

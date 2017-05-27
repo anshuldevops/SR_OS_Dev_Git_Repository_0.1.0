@@ -24,8 +24,15 @@
             <!-- /.main-menu -->
             <div class="search-form">
                <form name="search_form" method="get" action="#" class="search_form">
-                  <input type="text" name="s" placeholder="Search Keywords Here.. " class="field_search">
+                  <input type="text" name="search" placeholder="Search Keywords Here.. " class="field_search" [(ngModel)]="query" (keyup)=filter($event)  (blur)=handleBlur()>
                </form>
+            </div>
+            <div class="suggestions" *ngIf="filteredList.length > 0">
+                <ul *ngFor="let item of filteredList; let idx = index" >
+                    <li [class.complete-selected]="idx == selectedIdx">
+                        <a (click)="select(item)">{{item}}</a>
+                    </li>
+                </ul>
             </div>
             <!-- /.social-icons -->
          </nav>

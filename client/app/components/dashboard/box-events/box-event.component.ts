@@ -58,7 +58,7 @@ export class ScrollBarBoxComponent {
       itemResults$ = this.pageToLoad$
         .do(_ => this.loading = true)
         .flatMap((page: number) =>{
-          return this.http.get('https://swapi.co/api/people?page=1')
+          return this.http.get('http://localhost:3000/api/tasks?page=5')
               .map(resp => resp.json().results)
               .do(resp => {
                 this.cache[page -1] = resp;

@@ -45,7 +45,7 @@ var ScrollBarBoxComponent = (function () {
         this.itemResults$ = this.pageToLoad$
             .do(function (_) { return _this.loading = true; })
             .flatMap(function (page) {
-            return _this.http.get('https://swapi.co/api/people?page=1')
+            return _this.http.get('http://localhost:3000/api/tasks?page=5')
                 .map(function (resp) { return resp.json().results; })
                 .do(function (resp) {
                 _this.cache[page - 1] = resp;
