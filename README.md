@@ -32,11 +32,11 @@
 
 
 # Summary
-When work takes up majority of parents to across various parts of a country, so called Movements as some says, the biggest concern lies with is securing the admission into schools.
-However, given under any circumstances and by any means, parents somehow in some way figure out schools that is open to admissions which not only bring a promise for a better future but also offer fees that fit into their budget, where as some parents compromise on the budget but their kids eventually end up having a hassle free travelling experience.<br><br>
-No parent could stand to compromise on lack of quality of education that later stipulate an unpromising future of any child. But, in order to have maximum exploitation of benefits to gain, they allow themselves to compromise on those circumstantial problem which is of lesser priority and worth.<br>
+When work takes up majority of parents to across various parts of a country, so called industry movements as some says, the biggest concern lies with is securing the admission into schools.
+However, given under any circumstances and by any means, most of the parents somehow, in some way sort out schools that not only open to admissions along with a promise to a better future but also offer fees that fit into their budget, where as few ones do compromise on the budget but their kids eventually end up having a hassle free travelling experience.<br><br>
+No parent could stand to compromise on lack of quality education that later stipulate an unpromising future of their child. Yet, in order to have maximum exploitation of benefits to gain, they allow themselves to compromise on those circumstantial problem that is of lesser priority and worth.<br>
 Notwithstanding one unable to understand the pain unless one goes through during that whole process.<br><br>
-The School Rankings aims to streamline the course of admission process of pre-primary, primary and secondary schools of India using Internet. School Rankings converges the best of today's technology, and promises to bring upon a change into educational management system by leveraging the conventional process of knowing about status of admissions in schools.
+The School Rankings aims to streamline the course of admission process of pre-primary, primary and secondary schools of India through online platform. School Rankings converges the best of today's technology, and promises to bring upon a change into educational management system by leveraging the conventional process of knowing about status of admissions in schools.
 
 # Installation
 
