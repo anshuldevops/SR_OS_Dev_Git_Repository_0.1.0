@@ -30,6 +30,12 @@ var TaskService = (function () {
         return this.http.get('http://localhost:3000/api/tasks', options)
             .map(function (res) { return res.json().data; });
     };
+    TaskService.prototype.getSearch = function () {
+        var _this = this;
+        return this.http.get('http://localhost:3000/api/tasks')
+            .flatMap(function (response) { return response.json().quotes; })
+            .flatMap(function (film) { return _this.http.get(film); }, function (_, resp) { return resp.json().schoolname; });
+    };
     return TaskService;
 }());
 TaskService = __decorate([

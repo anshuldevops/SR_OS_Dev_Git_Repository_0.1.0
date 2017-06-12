@@ -14,6 +14,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var common_1 = require("@angular/common");
 var http_1 = require("@angular/http");
 var router_1 = require("@angular/router");
+var core_2 = require("angular2-logger/core");
 var main_navigation_menu_module_1 = require("./components/home_navigation/main-navigation-menu.module");
 var dashboard_module_1 = require("./components/dashboard/dashboard.module");
 var about_module_1 = require("./components/about/about.module");
@@ -32,7 +33,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, common_1.CommonModule, http_1.HttpModule, dashboard_module_1.DashboardModule, main_navigation_menu_module_1.MainNavigationMenuModule, about_module_1.AboutModule, contact_module_1.ContactModule, app_routing_module_1.AppRoutingModule, app_routing_module_1.mainRoutingProviders],
         declarations: [app_component_1.AppComponent, route_outlet_component_1.RouteOutletComponent, page_not_found_component_1.PageNotFoundComponent],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
+        providers: [core_2.Logger]
     }),
     __metadata("design:paramtypes", [router_1.Router])
 ], AppModule);

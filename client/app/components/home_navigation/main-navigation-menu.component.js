@@ -10,23 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var task_service_1 = require("../../services/task.service");
 var MainNavigationMenuComponent = (function () {
-    function MainNavigationMenuComponent(myElement) {
+    function MainNavigationMenuComponent(myElement, taskService) {
+        this.taskService = taskService;
         this.query = '';
-        this.countries = ["Albania", "Andorra", "Armenia", "Austria", "Azerbaijan", "Belarus", "Belgium", "Bosnia & Herzegovina",
-            "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia",
-            "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia", "Liechtenstein",
-            "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands",
-            "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia",
-            "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "Vatican City"];
+        this.schools = ["Blue Ridge International Public School", "Akshara International School", "D.A.V. Public School"];
         this.filteredList = [];
         this.navMenu = ['Home', 'School Rankings', 'Contact'];
         this.elementRef = myElement;
         this.selectedIdx = -1;
+        console.log(taskService.getTasks());
     }
     MainNavigationMenuComponent.prototype.filter = function (event) {
         if (this.query !== "") {
-            this.filteredList = this.countries.filter(function (el) {
+            this.filteredList = this.schools.filter(function (el) {
                 return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
             }.bind(this));
             if (event.code == "ArrowDown" && this.selectedIdx < this.filteredList.length) {
@@ -74,9 +72,10 @@ MainNavigationMenuComponent = __decorate([
         host: {
             '(document:click)': 'handleClick($event)',
         },
-        templateUrl: './app/components/home_navigation/main-navigation-menu.html'
+        templateUrl: './app/components/home_navigation/main-navigation-menu.html',
+        providers: [task_service_1.TaskService]
     }),
-    __metadata("design:paramtypes", [core_1.ElementRef])
+    __metadata("design:paramtypes", [core_1.ElementRef, task_service_1.TaskService])
 ], MainNavigationMenuComponent);
 exports.MainNavigationMenuComponent = MainNavigationMenuComponent;
 //# sourceMappingURL=main-navigation-menu.component.js.map

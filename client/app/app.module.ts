@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
+import { Logger } from 'angular2-logger/core';
 
 import { MainNavigationMenuModule } from './components/home_navigation/main-navigation-menu.module';
 import { DashboardModule } from './components/dashboard/dashboard.module';
@@ -17,7 +18,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
 @NgModule({
   imports:      [ BrowserModule, CommonModule, HttpModule, DashboardModule, MainNavigationMenuModule, AboutModule, ContactModule, AppRoutingModule, mainRoutingProviders ],
   declarations: [ AppComponent, RouteOutletComponent, PageNotFoundComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers:    [ Logger ]
 })
 
 export class AppModule {
