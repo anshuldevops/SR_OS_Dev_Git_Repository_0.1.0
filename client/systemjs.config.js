@@ -28,7 +28,8 @@
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       'ng2-sticky-kit':            'npm:ng2-sticky-kit',
       '@nx-js/framework':          'npm:@nx-js/framework',
-      'lodash':                    'npm:lodash/lodash.js'
+      'lodash':                    'npm:lodash/lodash.js',
+      'angular2-logger':           'npm:angular2-logger'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -51,6 +52,9 @@
         defaultExtension: 'js'
       },
       'lodash': {
+        defaultExtension: 'js'
+      },
+      'angular2-logger': {
         defaultExtension: 'js'
       }
     }
