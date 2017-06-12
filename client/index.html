@@ -19,19 +19,24 @@
     <!-- CSS Bootstrap & Custom -->
   <!--  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="bower_components/please-wait/build/please-wait.css" rel="stylesheet" media="screen">
     <link href="font/font-awesome.min.css" rel="stylesheet" media="screen">
     <link href="css/animate.css" rel="stylesheet" media="screen">
     <link href="css/education-graduate-directory-page.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet">
 
     <!-- JavaScripts -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	  <script src="http://static.usnews.com/scripts/jquery/base.js"></script>
-    <script src="lib/loader.js"></script>
-		<script src="lib/chart-utils.js"></script>
-		<script src="lib/google-charts.js"></script>
-    <script src="js/modernizr.js"></script>
+    <script type= "text/javascript" src= "http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type= "text/javascript" src= "http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type= "text/javascript" src= "http://static.usnews.com/scripts/jquery/base.js"></script>
+    <script type= "text/javascript" src= "lib/loader.js"></script>
+    <script type= "text/javascript" src= "lib/chart-utils.js"></script>
+    <script type= "text/javascript" src= "lib/google-charts.js"></script>
+    <script type= "text/javascript" src= "js/modernizr.js"></script>
+    <script type= "text/javascript" src= "bower_components/please-wait/build/please-wait.min.js"></script>
+
+    <!-- Favicons -->
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
 
     <!--[if lt IE 8]>
 	<div style=' clear: both; text-align:center; position: relative;'>
@@ -52,6 +57,14 @@
   </head>
 
   <body>
-    <my-app>Loading..</my-app>
+
+    <script type="text/javascript">
+          window.loading_screen = window.pleaseWait({
+            logo: "images/screen_loader.jpg",
+            backgroundColor: '#003a6a',
+            loadingHtml: "<div class='spinner'> <div class='rect1'></div> <div class='rect2'></div> <div class='rect3'></div> <div class='rect4'></div> <div class='rect5'></div> </div>"
+          }).finish();
+        </script>
+    <my-app></my-app>
   </body>
 </html>
