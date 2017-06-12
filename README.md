@@ -71,5 +71,5 @@ C:\Program Files\Git\mingw64\bin;<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Gi
 
 Developers can connect for research and development programs at rishimehta365@gmail.com. <br>
 Kindly put into subject header of electronic mail as: <br>
-R&D:SR:[your-name] <br>
-Internship:SR:[your-name] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;R&D:SR:[your-name] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Internship:SR:[your-name] <br>
