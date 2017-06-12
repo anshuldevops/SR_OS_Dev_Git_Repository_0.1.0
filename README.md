@@ -28,8 +28,6 @@
 - [Installation](#installation)
   - [Prerequisites Softwares](#prerequisites-softwares)
   - [Path Configuration](#path-configuration)
-  - [Connect](#connect)
-
 
 # Summary
 When work takes up majority of parents to across various parts of a country, so called industry movements as some says, the biggest concern lies with is securing the admission into schools.
@@ -71,6 +69,6 @@ C:\Program Files\Git\mingw64\bin;<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Gi
 ## Connect
 
 Developers can connect for research and development programs at rishimehta365@gmail.com. <br>
-Kindly put into subject header of electronic mail as: <br> 
+Kindly put into subject header of electronic mail as: <br>
 R&D:SR:[your-name] <br>
 Internship:SR:[your-name] <br>
