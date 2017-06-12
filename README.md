@@ -28,7 +28,7 @@
 - [Installation](#installation)
   - [Prerequisites Softwares](#prerequisites-softwares)
   - [Path Configuration](#path-configuration)
-  - [How to Setup](#how-to-setup)
+  - [Connect](#connect)
 
 
 # Summary
@@ -44,7 +44,7 @@ The School Rankings aims to streamline the course of admission process of pre-pr
 
 - [Prerequisites Softwares](#prerequisites-softwares)
 - [Path Configuration](#path-configuration)
-- [How to Setup](#how-to-setup)
+- [Connect](#connect)
 
 
 ---
@@ -68,4 +68,7 @@ For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\nodejs\;
 For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\cmd;<br>&nbsp;&nbsp;&nbsp;
 C:\Program Files\Git\mingw64\bin;<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\usr\bin
 
-## How to Setup
+## Connect
+
+Developers can connect for research and development programs at rishimehta365@gmail.com. <br>
+Kindly put into subject header of electronic mail as R&D:SR:[your-name] <br>
