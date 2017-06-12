@@ -14,9 +14,10 @@ var userPaginationMiddleware = paginationMiddleware({
   }
 });
 
+
 //GET All School Information
 router.get('/tasks', userPaginationMiddleware, (req, res, next)=>{
-  db.quotes.find().skip(req.pagination.skip).limit(req.pagination.limit,(err, quotes)=>{
+  db.quotes.find().skip(req.pagination.skip).limit(req.pagination.limit, (err, quotes)=>{
     if(err){
       res.send(err);
     }
