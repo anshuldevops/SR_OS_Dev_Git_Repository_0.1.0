@@ -28,6 +28,7 @@
 - [Installation](#installation)
   - [Prerequisites Softwares](#prerequisites-softwares)
   - [Path Configuration](#path-configuration)
+  - [Connect](#connect)
 
 # Summary
 When work takes up majority of parents to across various parts of a country, so called industry movements as some says, the biggest concern lies with is securing the admission into schools.
