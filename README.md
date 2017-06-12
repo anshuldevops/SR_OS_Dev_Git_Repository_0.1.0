@@ -68,4 +68,7 @@ For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\nodejs\;
 For Windows:<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\cmd;<br>&nbsp;&nbsp;&nbsp;
 C:\Program Files\Git\mingw64\bin;<br>&nbsp;&nbsp;&nbsp;&nbsp;C:\Program Files\Git\usr\bin
 
-## How to Setup
+## Connect
+
+Developers can connect for research and development programs at rishimehta365@gmail.com. 
+Kindly put into subject header of electronic mail as R&D:SR:<your-name>
