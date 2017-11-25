@@ -13,18 +13,18 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
 var lodash_1 = require("lodash");
-var router_1 = require("@angular/router");
 require("rxjs/add/operator/switchMap");
+var dashboard_service_1 = require("../services/dashboard.service");
 var ScrollBarBoxComponent = (function () {
-    function ScrollBarBoxComponent(http, route, router) {
+    function ScrollBarBoxComponent(http, dashboardService) {
         var _this = this;
         this.http = http;
-        this.route = route;
-        this.router = router;
+        this.dashboardService = dashboardService;
         this.cache = [];
         this.pageByManual$ = new Rx_1.BehaviorSubject(1);
         this.itemHeight = 40;
-        this.numberOfItems = 10;
+        this.numberOfItems = 20;
+        // Infinite Scrolling
         this.pageByScroll$ = Rx_1.Observable.fromEvent(window, "scroll")
             .map(function () { return window.scrollY; })
             .filter(function (current) { return current >= document.body.clientHeight - window.innerHeight; })
@@ -43,12 +43,12 @@ var ScrollBarBoxComponent = (function () {
         this.itemResults$ = this.pageToLoad$
             .do(function (_) { return _this.loading = true; })
             .flatMap(function (page) {
-            return _this.http.get('http://localhost:3000/api/tasks?limit=5')
-                .map(function (resp) { return resp.json().results; })
+            return _this.http.get("http://localhost:3000/api/tasks?skip=" + page)
+                .map(function (res) { return res.json(); })
                 .do(function (resp) {
                 _this.cache[page - 1] = resp;
-                _this.loading = false;
-                if ((_this.itemHeight * _this.numberOfItems * page) < window.innerHeight) {
+                console.log((_this.itemHeight * _this.numberOfItems * page) < window.innerHeight);
+                if (!((_this.itemHeight * _this.numberOfItems * page) < window.innerHeight)) {
                     _this.pageByManual$.next(page + 1);
                 }
             });
@@ -62,7 +62,7 @@ ScrollBarBoxComponent = __decorate([
         selector: 'scro-app',
         templateUrl: './app/components/dashboard/box-events/scrollbar-box.html'
     }),
-    __metadata("design:paramtypes", [http_1.Http, router_1.ActivatedRoute, router_1.Router])
+    __metadata("design:paramtypes", [http_1.Http, dashboard_service_1.DashboardService])
 ], ScrollBarBoxComponent);
 exports.ScrollBarBoxComponent = ScrollBarBoxComponent;
 //# sourceMappingURL=box-event.component.js.map

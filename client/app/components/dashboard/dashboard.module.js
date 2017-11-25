@@ -18,6 +18,7 @@ var box_event_component_1 = require("./box-events/box-event.component");
 var school_detail_component_1 = require("./school_detail/school-detail.component");
 var dashboard_routing_module_1 = require("./dashboard-routing.module");
 var main_navigation_menu_module_1 = require("../home_navigation/main-navigation-menu.module");
+var dashboard_service_1 = require("./services/dashboard.service");
 var DashboardModule = (function () {
     function DashboardModule() {
     }
@@ -27,7 +28,8 @@ DashboardModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, router_1.RouterModule, dashboard_routing_module_1.DashboardRoutingModule, main_navigation_menu_module_1.MainNavigationMenuModule],
         declarations: [dashboard_component_1.DashboardComponent, city_list_component_1.CityListComponent, box_event_component_1.ScrollBarBoxComponent, school_detail_component_1.SchoolDetailComponent],
-        exports: [dashboard_component_1.DashboardComponent, city_list_component_1.CityListComponent, box_event_component_1.ScrollBarBoxComponent, school_detail_component_1.SchoolDetailComponent]
+        exports: [dashboard_component_1.DashboardComponent, city_list_component_1.CityListComponent, box_event_component_1.ScrollBarBoxComponent, school_detail_component_1.SchoolDetailComponent],
+        providers: [dashboard_service_1.DashboardService]
     })
 ], DashboardModule);
 exports.DashboardModule = DashboardModule;

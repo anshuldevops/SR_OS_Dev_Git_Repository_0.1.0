@@ -20,7 +20,6 @@ var MainNavigationMenuComponent = (function () {
         this.navMenu = ['Home', 'School Rankings', 'Contact'];
         this.elementRef = myElement;
         this.selectedIdx = -1;
-        console.log(taskService.getTasks());
     }
     MainNavigationMenuComponent.prototype.filter = function (event) {
         if (this.query !== "") {

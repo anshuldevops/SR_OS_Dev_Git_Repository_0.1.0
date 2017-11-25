@@ -13,18 +13,17 @@
                      <div class="list-event-header">
                         <span class="event-place small-text"><i class="fa fa-globe"></i>{{item?.areacity}}</span>
                         <span class="event-place small-text"><i class="fa fa-globe"></i>{{item?.city}}</span>
-                        <span class="event-date small-text"><i [ngClass]="(item?.admission=='Yes')?'fa fa-thumbs-up': (item?.admission=='Yes')?'fa fa-thumbs-down':'fa fa-exclamation-triangle'"></i>Admission</span>
-                        <div class="view-details"><a href="event-single.html" class="lightBtn">View Details</a></div>
+                        <span class="event-date small-text"><i [ngClass]="(item?.admission=='Yes')?'fa fa-thumbs-up': (item?.admission=='No')?'fa fa-thumbs-down':'fa fa-exclamation-triangle'"></i>Admission</span>
+                        <div class="view-details"><a routerLink="/school/:id" routerLinkActive="active" class="lightBtn">View Details</a></div>
                         <div class="calendar-small" >
                            <span class="s-month">Rank</span>
                            <span class="s-date">#{{item?.rank}}</span>
                         </div>
                     </div>
                      <h5 class="event-title"><a routerLink="/school/:id" routerLinkActive="active">{{item?.schoolname}}</a></h5>
-                     <p>{{item?.address}}</p>
+                     <p>&nbsp; {{item?.address}}</p>
                   </div>
                   <!-- /.box-content-inner -->
-
                </div>
                <!-- /.list-event-item -->
              </div>
@@ -38,7 +37,7 @@
                <div id="loadButton" class="loadButton">
                  <span *ngIf="loading; then load else end"></span>
                  <ng-template #load><img src='images/loading.gif' alt=''></ng-template>
-                 <ng-template #end></ng-template>
+                 <ng-template #end><img src='images/loader.gif' alt=''></ng-template>
                </div>
 
             </div>

@@ -10,23 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var SchoolDetailComponent = (function () {
-    function SchoolDetailComponent(route) {
-        this.route = route;
+var dashboard_service_1 = require("./services/dashboard.service");
+var SchoolResolve = (function () {
+    function SchoolResolve(dashboardService) {
+        this.dashboardService = dashboardService;
     }
-    SchoolDetailComponent.prototype.ngOnInit = function () {
-        this.schools$ = this.route.data.pluck['school'];
-        console.log(this.schools$);
+    SchoolResolve.prototype.resolve = function (route) {
+        return this.dashboardService.getSchool(route.paramMap.get('id'));
     };
-    return SchoolDetailComponent;
+    return SchoolResolve;
 }());
-SchoolDetailComponent = __decorate([
-    core_1.Component({
-        selector: 'schooldetail-app',
-        templateUrl: './app/components/dashboard/school_detail/school-detail.html'
-    }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], SchoolDetailComponent);
-exports.SchoolDetailComponent = SchoolDetailComponent;
-//# sourceMappingURL=school-detail.component.js.map
+SchoolResolve = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [dashboard_service_1.DashboardService])
+], SchoolResolve);
+exports.SchoolResolve = SchoolResolve;
+//# sourceMappingURL=school.resolve.js.map

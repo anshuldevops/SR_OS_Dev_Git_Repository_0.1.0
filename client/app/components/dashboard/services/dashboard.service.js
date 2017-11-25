@@ -10,23 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var SchoolDetailComponent = (function () {
-    function SchoolDetailComponent(route) {
-        this.route = route;
+var http_1 = require("@angular/http");
+var DashboardService = (function () {
+    function DashboardService(http) {
+        this.http = http;
+        this.apiUrl = 'http://localhost:3000/api/tasks';
     }
-    SchoolDetailComponent.prototype.ngOnInit = function () {
-        this.schools$ = this.route.data.pluck['school'];
-        console.log(this.schools$);
+    DashboardService.prototype.getSchool = function (id) {
+        return this.http.get(this.apiUrl).map(function (res) { return res.json(); });
     };
-    return SchoolDetailComponent;
+    DashboardService.prototype.getSchools = function () {
+        return this.http.get(this.apiUrl).map(function (res) { return res.json(); });
+    };
+    return DashboardService;
 }());
-SchoolDetailComponent = __decorate([
-    core_1.Component({
-        selector: 'schooldetail-app',
-        templateUrl: './app/components/dashboard/school_detail/school-detail.html'
-    }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], SchoolDetailComponent);
-exports.SchoolDetailComponent = SchoolDetailComponent;
-//# sourceMappingURL=school-detail.component.js.map
+DashboardService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], DashboardService);
+exports.DashboardService = DashboardService;
+//# sourceMappingURL=dashboard.service.js.map

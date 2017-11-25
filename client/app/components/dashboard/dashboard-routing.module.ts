@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { SchoolDetailComponent } from './school_detail/school-detail.component';
+import { SchoolResolve } from './school.resolve';
 
 const dashboardRoutes: Routes = [
 
@@ -12,7 +13,10 @@ const dashboardRoutes: Routes = [
   },
   {
     path: 'school/:id',
-    component: SchoolDetailComponent
+    component: SchoolDetailComponent,
+    resolve: {
+      school: SchoolResolve
+    }
   }
 ];
 
@@ -22,7 +26,8 @@ const dashboardRoutes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  providers: [ SchoolResolve ]
 })
 
 export class DashboardRoutingModule{ }

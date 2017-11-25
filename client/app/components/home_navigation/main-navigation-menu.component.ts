@@ -20,11 +20,11 @@ export class MainNavigationMenuComponent {
   selectedIdx: number;
 
   navMenu: string[];
+
   constructor(myElement: ElementRef, private taskService: TaskService) {
     this.navMenu = ['Home','School Rankings', 'Contact'];
     this.elementRef = myElement;
     this.selectedIdx = -1;
-    console.log(taskService.getTasks());
     }
 
     filter(event: any) {
