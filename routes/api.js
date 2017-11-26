@@ -9,8 +9,8 @@ var userPaginationMiddleware = paginationMiddleware({
       validKeys: ["created"]
   },
   limit:{
-    min:5,
-    max:20
+    min:1,
+    max:50
   }
 });
 
