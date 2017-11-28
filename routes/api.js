@@ -10,7 +10,7 @@ var userPaginationMiddleware = paginationMiddleware({
   },
   limit:{
     min:1,
-    max:50
+    max:5
   }
 });
 
