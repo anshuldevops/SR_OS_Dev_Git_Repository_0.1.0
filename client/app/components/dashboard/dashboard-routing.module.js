@@ -17,8 +17,13 @@ var dashboardRoutes = [
         component: dashboard_component_1.DashboardComponent
     },
     {
-        path: 'school/:id',
-        component: school_detail_component_1.SchoolDetailComponent,
+        path: 'school', component: school_detail_component_1.SchoolDetailComponent,
+        children: [
+            {
+                path: ':id',
+                component: school_detail_component_1.SchoolDetailComponent
+            }
+        ],
         resolve: {
             school: school_resolve_1.SchoolResolve
         }

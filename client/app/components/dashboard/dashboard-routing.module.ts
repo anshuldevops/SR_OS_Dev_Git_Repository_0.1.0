@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { SchoolDetailComponent } from './school_detail/school-detail.component';
 import { SchoolResolve } from './school.resolve';
+import { PageNotFoundComponent } from '../../../app/page-not-found.component';
 
 const dashboardRoutes: Routes = [
 
@@ -12,8 +13,13 @@ const dashboardRoutes: Routes = [
    component: DashboardComponent
   },
   {
-    path: 'school/:id',
-    component: SchoolDetailComponent,
+    path: 'school', component: SchoolDetailComponent,
+    children: [
+      {
+      path: ':id',
+      component : SchoolDetailComponent
+    }
+    ],
     resolve: {
       school: SchoolResolve
     }

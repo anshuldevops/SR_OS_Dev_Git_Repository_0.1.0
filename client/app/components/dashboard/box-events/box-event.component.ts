@@ -47,15 +47,15 @@ export class ScrollBarBoxComponent {
       loading = false;
       itemResults$= this.pageToLoad$
         .do(_ => this.loading = true)
-        .flatMap((page: number): Observable<SchoolData[]> => {
+        .flatMap((page: number): Observable<any> => {
 
-          return this.http.get(`http://localhost:3000/api/tasks?skip=${page}`)
+          return this.http.get(`http://localhost:3000/api/tasks?skip=${page-1}`)
           .map(res=> res.json())
               .do(resp => {
                 this.cache[page -1] = resp;
-                console.log((this.itemHeight * this.numberOfItems * page) < window.innerHeight);
                 if(!((this.itemHeight * this.numberOfItems * page) < window.innerHeight)){
                   this.pageByManual$.next(page+1);
+                    this.loading = false;
                 }
               })
         })

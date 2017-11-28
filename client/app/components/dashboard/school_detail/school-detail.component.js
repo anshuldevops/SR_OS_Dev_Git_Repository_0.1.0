@@ -16,8 +16,8 @@ var SchoolDetailComponent = (function () {
         this.route = route;
     }
     SchoolDetailComponent.prototype.ngOnInit = function () {
-        this.schools$ = this.route.data.pluck['school'];
-        console.log(this.schools$);
+        this.schools = this.route.data.pluck['school'];
+        console.log(this.schools);
     };
     return SchoolDetailComponent;
 }());

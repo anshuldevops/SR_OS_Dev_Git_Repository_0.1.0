@@ -43,13 +43,13 @@ var ScrollBarBoxComponent = (function () {
         this.itemResults$ = this.pageToLoad$
             .do(function (_) { return _this.loading = true; })
             .flatMap(function (page) {
-            return _this.http.get("http://localhost:3000/api/tasks?skip=" + page)
+            return _this.http.get("http://localhost:3000/api/tasks?skip=" + (page - 1))
                 .map(function (res) { return res.json(); })
                 .do(function (resp) {
                 _this.cache[page - 1] = resp;
-                console.log((_this.itemHeight * _this.numberOfItems * page) < window.innerHeight);
                 if (!((_this.itemHeight * _this.numberOfItems * page) < window.innerHeight)) {
                     _this.pageByManual$.next(page + 1);
+                    _this.loading = false;
                 }
             });
         })

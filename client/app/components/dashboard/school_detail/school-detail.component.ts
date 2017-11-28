@@ -10,13 +10,12 @@ import { SchoolData } from '../models/schooldata.model';
 
 export class SchoolDetailComponent implements OnInit {
 
-
- schools$: Observable<SchoolData[]>;
+ schools: Observable<SchoolData[]>;
 
  constructor(private route: ActivatedRoute){}
 
  ngOnInit() {
-  this.schools$ = this.route.data.pluck['school'];
-  console.log(this.schools$);
+  this.schools = this.route.data.pluck['school'];
+  console.log(this.schools);
     }
  }

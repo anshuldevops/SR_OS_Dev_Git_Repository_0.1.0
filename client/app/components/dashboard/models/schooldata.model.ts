@@ -4,6 +4,6 @@ export class SchoolData{
   address: string;
   areacity: string;
   city: string;
-  rank: number;
+  Rank: number;
   admission : string;
 }
